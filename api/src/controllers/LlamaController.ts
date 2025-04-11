@@ -11,7 +11,7 @@ export class LlamaController {
     async generateResponse(req: Request, res: Response) {
         try {
             const { prompt } = req.body;
-
+            console.log(req.body);
             if (!prompt) {
                 return res.status(400).json({ error: 'Prompt is required' });
             }
